@@ -33,7 +33,7 @@ const log = winston.createLogger({
     })
   ],
   levels: custConfig.levels,
-  level: process.env.NODE_ENV === 'dev'
+  level: process.env.NODE_ENV === 'dev' ? 'debug' : 'warn'
 });
 
 winston.addColors(custConfig.colors);

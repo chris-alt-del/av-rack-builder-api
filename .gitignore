@@ -24,3 +24,4 @@ uplTest.txt
 jsconfig.json
 src/photos/uploads
 .env
+.prettierrc

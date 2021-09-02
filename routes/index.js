@@ -3,18 +3,12 @@ import * as ctrl from './ctrl';
 
 const router = express.Router();
 
-const html = `
-  <html>
-    <body>
-      <h2>Server is healthy</h2>
-    </body>
-  </html>
-`;
-
-router.get('/', (request, response) => {
-  response.send(html);
+router.get('/', (req, res) => {
+  res.json({ msg: 'Healthy' });
 });
 
 router.get('/brands', ctrl.getBrands);
+router.get('/devices/', ctrl.getDevice);
+router.get('/devices/all', ctrl.getAllDevices);
 
 export default router;
